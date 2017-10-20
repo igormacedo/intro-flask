@@ -16,3 +16,12 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post %r>' % (self.body)
+
+class PostSimple(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    body = db.Column(db.String(3000))
+    timestamp = db.Column(db.DateTime)
+    user_name = db.Column(db.String(140))
+
+    def __repr__(self):
+        return '<Post %r>' % (self.body)

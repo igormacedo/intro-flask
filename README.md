@@ -24,3 +24,9 @@ Depois de instalar os programas acima, continue na preparação do ambiente de d
 ```
 (venv)[gitProject]$ pip install Flask
 ```
+
+adicionar bootstrap
+criar aquivo home.html
+modificar view.py
+modificar models para adicionar novo post
+criar arquivo newpost.html

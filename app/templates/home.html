@@ -3,7 +3,11 @@
 
 <head>
     <title>Python Flask Bucket List App</title>
-    <!-- add here -->
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- Scripts padrão -->
+    <script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.9.1.js') }}"></script>
+    <script language="JavaScript" type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 </head>
 
 <body>
@@ -11,7 +15,8 @@
         <div class="header">
             <nav>
                 <ul class="nav nav-pills pull-right">
-                    <!-- add here -->
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="/addpost">Add Post</a>
                 </ul>
             </nav>
             <h3 class="text-muted">Python Flask App</h3>
@@ -20,7 +25,13 @@
         </br></br></br>
 
         <div class="row marketing">
-            <!-- add here -->
+            <div class="col-lg-12">
+                {%for post in posts%}
+                <h4>{{post.user_name}}</h4>
+                <p>{{post.body}}</p>
+                </br></br>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </body>

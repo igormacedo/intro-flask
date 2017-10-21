@@ -30,3 +30,4 @@ criar aquivo home.html
 modificar view.py
 modificar models para adicionar novo post
 criar arquivo newpost.html
+modificar view.py
